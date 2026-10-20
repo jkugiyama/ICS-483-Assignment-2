@@ -33,7 +33,7 @@ def myImageGradient(img0):
 
     # TODO: filter img0 with KX and KY.
     # You may use cv2.filter2D or scipy.ndimage filtering.
-    imgx = None
-    imgy = None
+    imgx = cv2.filter2D(img0, -1, KX)
+    imgy = cv2.filter2D(img0, -1, KY)
 
     return imgx, imgy
